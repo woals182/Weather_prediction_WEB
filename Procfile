@@ -1,1 +1,1 @@
-web: gunicorn --workers=1 'weather_app:create_app()' --timeout 400  
+web: gunicorn --workers=1 'weather_app:create_app()' --timeout 400
