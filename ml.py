@@ -104,3 +104,5 @@ def prediction(M,D,hour):
     {round(float(y_pred[0][5]),2)} : 현지기압(hPa)"""
 
     return pred
+
+    

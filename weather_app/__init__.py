@@ -40,3 +40,5 @@ def create_app():
             return render_template('index.html', predict=pred) , 200
 
     return app
+
+    
