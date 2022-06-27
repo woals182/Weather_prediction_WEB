@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ '데이터 분석' }}</title>
+  </head>
+  <body>
+    <br><br><br><br>
+    <div style="text-align:center">
+    
+    <form id="upload" action="/weather" method="POST" >
+        <div><label for="month"> 월입력 :  </label>
+            <input type="number" value="month" name="month" placeholder="월을 입력해주세요. ex) 1,2,3,4...">
+        </div>
+        <br><br>
+        <div><label for="day"> 일입력 :  </label>
+            <input type="number" value="day" name="day"placeholder="일을 입력해주세요. ex) 1,2,3,4...">
+        </div>
+        <br><br>
+        <div><label for="hour"> 시간입력 :  </label>
+            <input type="number" value="hour" name="hour"placeholder="시간을 입력해주세요. ex) 12,17,19,23,0">
+        </div>
+        <p><input type="submit" value="결과"></p>
+        <p><input type="reset" value="초기화"></p>
+        <br><br>
+
+        {% if predict %}
+            <span class="result_lable">
+               예상 날씨<br><br><br><br> 
+               {{ predict }} 입니다.
+            </span>
+        {% endif %}
+    </form>
+    </div>
+    <body>
+      <div style="text-align:center">
+      <br><br><br><br>
+      <h1> {{'기온 기준 데이터'}}</h1>
+      <iframe 
+      width="1000" 
+      height="700" 
+      src="https://datastudio.google.com/embed/reporting/2c779f7e-d3cc-481d-bf22-3a414c535b45/page/c2KwC" 
+      frameborder="0" 
+      style="border:0" 
+      allowfullscreen></iframe></div>
+  
+    </body>
+  
+  
+    <body>
+      <div style="text-align:center">
+      <br><br><br><br>
+      <h1> {{'시계열 데이터'}}</h1>
+      <iframe 
+      width="1000" 
+      height="700" 
+      src="https://datastudio.google.com/embed/reporting/73ff4ed2-04d4-4986-a5a1-6e12ffcd197f/page/C0KwC" 
+      frameborder="0" 
+      style="border:0" 
+      allowfullscreen></iframe></div>
+  
+    </body>
+  </body>
+</html>
